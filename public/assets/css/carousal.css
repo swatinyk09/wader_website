@@ -1,0 +1,310 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: black;
+}
+
+.navbar {
+    position: fixed;
+    width: auto;
+    top: 1em;
+    left: 1em;
+    right: 1em;
+    padding: 10px 20px;
+    background: rgb(255, 255, 255);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+    border: 3px solid #4BC8CC;
+    border-radius: 50px;
+    z-index: 1000;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-top: 1em;
+}
+
+.nav-links li {
+    margin-right: 5em;
+}
+
+.nav-links a {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    color: #4BC8CC;
+    text-underline-offset: 1em;
+    text-decoration-thickness: 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+.brand {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    color: #000000;
+    font-size: 2em;
+    font-weight: bold;
+    margin-right: 10em;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background: black;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.carousel-inner {
+    display: flex;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    z-index: 3;
+    bottom: 25%;
+    left: 65%;
+    transform: translateX(-50%);
+    text-align: right;
+    color: white;
+    padding: 5px;
+    width: 45%; 
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.caption h2 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.caption p {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+}
+
+.carousel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+    z-index: 2;
+}
+
+.carousel-inner, .carousel-item {
+    position: relative;
+    z-index: 1;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    z-index: 10;
+}
+
+.prev:hover, .next:hover {
+    color: #4bc8cc
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.carousel-dots {
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    z-index: 3;
+}
+
+.dot {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: rgb(75, 200, 204);
+    border: 1px solid #38989c;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Scroll to Top Button */
+.scroll-to-top-btn {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 53px;
+    height: 53px;
+    background-color: #4BC8CC;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 55px;
+    cursor: pointer;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 1);
+    z-index: 1000;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    transform: translateY(50px);
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Show Button */
+.scroll-to-top-btn.show {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Hover Effect */
+.scroll-to-top-btn:hover {
+    background-color: white;
+    color: #4BC8CC;
+}
+
+@media (max-width: 768px) {
+
+    .brand {
+        float: none;
+        margin: 0;
+        height: 30px;
+		font-size: 20px;
+	}
+
+    .brand img {
+        height: 30px;
+    }
+    
+    .nav-links {
+        display: none; /* Hide navbar */
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 25px;
+        width: 60%;
+        border-radius: 10px;
+        z-index: 50;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show navbar when active */
+    }
+
+    .hamburger-menu {
+        display: flex; /* Show hamburger menu */
+    }
+
+    .nav-links a {
+        border-bottom: 1px solid #e4e4e4;
+    }
+
+    .nav-links a:hover {
+        text-decoration: none;
+    }
+
+    .carousel {
+        height: 400px; /* Further adjust height for very small screens */
+    }
+    
+    .carousel-caption {
+        font-size: 12px;
+        left: 60%;
+        width: 60%;
+        height: 40%;
+    }
+
+    .scroll-to-top-btn{
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+    }
+    
+}

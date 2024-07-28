@@ -1,0 +1,35 @@
+footer h2{
+    font-weight: 700;
+}
+footer h5 {
+    font-weight: bold;
+}
+
+footer ul {
+    padding: 0;
+}
+
+footer ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+footer a {
+    font-size: 1.5rem;
+}
+.cont{
+    border-radius: 20px;
+    margin-left: 20px;
+}
+address{
+    font-weight:500;
+}
+.sub{
+    width: 200px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #4BC8CC;
+}
+.copy{
+    color: grey;
+}

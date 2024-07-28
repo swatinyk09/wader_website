@@ -1,0 +1,57 @@
+
+.Primary-font {
+    font-family: "Orelega One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.Secondary-font{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 2%;
+}
+
+.who-we-are-text-size{
+    font-size: 33px;
+}
+
+.breadcrumb {
+    color:#4BC8CC;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    justify-content: start;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #4BC8CC;
+}
+
+.title-color{
+    color:#073D8E;
+}
+
+.img-rotate {
+    transform: rotate(15.08deg);
+  }
+
+.who-we-are-background{
+    background-image: url("../aboutimgs/background.jpeg");
+    background-size: cover;    
+    background-position-x: center;
+    background-position-y: bottom;
+}
+
+
+.mission-vision-background{
+    background-image: url("../aboutimgs/vis-mis-background.png");
+}
+
+.mission-vision-text{
+    font-size: 44px;
+}
